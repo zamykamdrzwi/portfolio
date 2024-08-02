@@ -1,52 +1,70 @@
 <script setup>
 import { defineProps, onMounted, ref } from "vue";
-import SkillsCheck from "@/components/home/SkillsCheck.vue";
 
 const { letters } = defineProps(["letters"]);
 
 const displayedText = ref([]);
 const typingSpeed = 100;
-const delayBetweenLoops = 30000;
 
-onMounted(() => {
-  startTyping();
+let isTyping = false;
+let inView = false;
 
-  const handleIntersection = (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        console.log('Element jest widoczny!');
-      }
-    });
-  }
-});
-
-const observer = new IntersectionObserver((handleIntersection) => {
+const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 1.0
+  threshold: 0.1
+};
+const box = ref(null);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(handleIntersection, options);
+  observer.observe(box.value);
 });
 
+const handleIntersection = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log('dzoala')
+      startTyping();
+      inView = true;
+    } else {
+      console.log('niee')
+      inView = false;
+    }
+  });
+}
+
+
+// HANDLE ANIMATION
 const startTyping = () => {
-  console.log('da')
   let index = 0;
   displayedText.value = [];
+  let text = letters;
 
   const typeLetter = () => {
-    if (index < letters.length) {
-      const nextLetter = letters[index] === ' ' ? '&nbsp;' : letters[index];
+    if (index < text.length) {
+      isTyping = true;
+      const nextLetter = text[index] === ' ' ? '&nbsp;' : text[index];
       displayedText.value.push(nextLetter);
       index++;
+      if(!inView) {
+        index = 0;
+        text = letters;
+        displayedText.value = [];
+      }
       setTimeout(typeLetter, typingSpeed);
     } else {
-      setTimeout(() => startTyping(), delayBetweenLoops);
+      isTyping = false;
     }
   };
+
+  if (isTyping) return text = letters;
   typeLetter();
 }
 </script>
 
 <template>
-  <div class="box">
+  <div class="box" ref="box">
     <span v-for="(letter, index) in displayedText" :key="index"
          v-html="letter">
     </span>

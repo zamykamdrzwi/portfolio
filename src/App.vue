@@ -1,8 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
+import HeaderMenu from './components/HeaderMenu.vue';
 </script>
 
 <template>
+  <HeaderMenu />
 <!--  <header>-->
 <!--    <div class="wrapper">-->
 <!--      <nav>-->

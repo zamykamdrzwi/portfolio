@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import FloorLayout from "@/components/layouts/FloorLayout.vue";
 import LettersAnimation from "@/components/layouts/LettersAnimation.vue";
 
 const skills = ref([
@@ -46,10 +45,6 @@ const skills = ref([
   <section class="container">
     <div class="container__header">
       <small data-aos="fade-right">Języki programowania, frameworki oraz narzędzia</small>
-<!--      <h2 data-aos="fade-right">-->
-<!--        <span>Moje umiejętności</span>-->
-<!--        <floor-layout />-->
-<!--      </h2>-->
       <letters-animation :letters="'Moje umiejętności'"/>
     </div>
 
@@ -83,13 +78,6 @@ const skills = ref([
       font-size: 16px;
       letter-spacing: 1px;
     }
-
-    //& h2 {
-    //  color: $font-color;
-    //  font-size: 46px;
-    //  line-height: 56px;
-    //  font-weight: 700;
-    //}
   }
 
   &__body {

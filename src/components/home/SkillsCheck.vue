@@ -1,55 +1,19 @@
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 import LettersAnimation from "@/components/layouts/LettersAnimation.vue";
 
-const skills = ref([
-  {
-    title: 'VUE',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/vue_logo.webp',
-  },
-  {
-    title: 'Bootstrap',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/bootstrap_logo.webp',
-  },
-  {
-    title: 'Tailwind',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/tailwind_logo.webp',
-  },
-  {
-    title: 'Sass',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/sass_logo.webp',
-  },
-  {
-    title: 'Docker',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/docker_logo.svg',
-  },
-  {
-    title: 'Linux - Ubuntu',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/ubuntu_logo.svg',
-  },
-  {
-    title: 'Node-JS',
-    description: 'Najlepiej programuję we vue 2 oraz vue 3',
-    img: '/images/node-js_logo.svg',
-  }
-])
+const { skills } = defineProps(["skills"]);
 </script>
 
 <template>
   <section class="container">
     <div class="container__header">
-      <small data-aos="fade-right">Języki programowania, frameworki oraz narzędzia</small>
-      <letters-animation :letters="'Moje umiejętności'"/>
+      <small data-aos="fade-right">{{ skills.subtitle }}</small>
+      <letters-animation :letters="skills.title"/>
     </div>
 
     <div class="container__body">
-      <div class="container__item" v-for="item in skills" :key="item.name"
+      <div class="container__item" v-for="item in skills.items" :key="item.name"
            data-aos="zoom-in">
         <div class="container__item-box">
           <img :src="item.img" alt="logo">

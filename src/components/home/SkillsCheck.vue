@@ -31,6 +31,10 @@ const { skills } = defineProps(["skills"]);
   background-color: $color-primary;
   padding: 130px 165px;
 
+  @media(max-width: 1300px) {
+    padding: 130px 30px;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -48,11 +52,27 @@ const { skills } = defineProps(["skills"]);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 60px 20px;
+
+    @media(max-width: 1600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 1050px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 700px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+
+    @media(max-width: 1050px) {
+      align-items: center;
+    }
     
     &-box {
       display: flex;

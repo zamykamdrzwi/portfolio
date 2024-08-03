@@ -79,5 +79,10 @@ const startTyping = () => {
   font-size: 46px;
   line-height: 56px;
   font-weight: 700;
+
+  @media(max-width: 900px) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }
 </style>

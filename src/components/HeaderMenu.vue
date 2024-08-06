@@ -127,6 +127,10 @@ const scroll = () => {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
     transition: height 0.5s ease-out;
+
+    @media(max-width: 830px) {
+      display: none;
+    }
   }
 }
 

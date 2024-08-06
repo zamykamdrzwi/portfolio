@@ -6,7 +6,7 @@ import EmailForm from "@/components/EmailForm.vue";
   <section class="footer">
     <div class="footer__header">
       <small data-aos="fade-right">
-        Jeżeli jesteś zainteresowany podjęciem ze mną współprawcy to zapraszam do kontaktu
+        Jeżeli jesteś zainteresowany podjęciem ze mną współpracy to zapraszam do kontaktu
       </small>
       <letters-animation :letters="'Kontakt'"/>
     </div>

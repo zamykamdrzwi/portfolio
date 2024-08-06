@@ -24,11 +24,11 @@ onMounted(() => {
 const handleIntersection = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log('dzoala')
+      // console.log('dzoala')
       startTyping();
       inView = true;
     } else {
-      console.log('niee')
+      // console.log('niee')
       inView = false;
     }
   });

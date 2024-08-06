@@ -1,15 +1,32 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { RouterLink } from 'vue-router';
 import HamburgerMenu from "@/components/layouts/HamburgerMenu.vue";
 
 const isHidden = ref(true);
 const hamburger = ref(null);
+const pcmenu = ref(null);
+
+onMounted(() => {
+  scroll();
+});
 
 const toggleMenu = () => {
   void hamburger.offsetWidth;
   isHidden.value = !isHidden.value;
 };
+
+const scroll = () => {
+  const triggerPoint = 280;
+
+  window.addEventListener("scroll", () => {
+    if(window.scrollY >= triggerPoint && isHidden.value) {
+      pcmenu.value.classList.remove("add-bg");
+    } else {
+      pcmenu.value.classList.add("add-bg");
+    }
+  });
+}
 </script>
 
 <template>
@@ -20,7 +37,7 @@ const toggleMenu = () => {
       <RouterLink to="/projekty">Projekty</RouterLink>
       <RouterLink to="/doswiadczenie">Doświadczenie</RouterLink>
     </nav>
-    <div class="header__layout"></div>
+    <div class="header__layout add-bg" ref="pcmenu"></div>
     <div class="header__burger">
       <hamburger-menu @click="toggleMenu"/>
     </div>
@@ -39,7 +56,6 @@ const toggleMenu = () => {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 15px;
   z-index: 999;
 
   @media(max-width: 830px) {
@@ -50,6 +66,7 @@ const toggleMenu = () => {
     display: flex;
     gap: 20px;
     font-size: 18px;
+    padding-top: 15px;
 
     @media(max-width: 830px) {
       display: none;
@@ -100,5 +117,19 @@ const toggleMenu = () => {
   &__phone.show {
     right: 9px;
   }
+
+  &__layout {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: height 0.5s ease-out;
+  }
+}
+
+.add-bg {
+  height: 0px;
 }
 </style>

@@ -61,10 +61,21 @@ const sendEmail = async () => {
   gap: 20px;
   width: 500px;
 
+  @media(max-width: 600px) {
+    width: 100%;
+  }
+
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media(max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-right: 20px;
+    }
 
     & label {
       color: $color-tertiary;
@@ -89,6 +100,10 @@ const sendEmail = async () => {
       color: $color-tertiary;
       font-size: 16px;
       letter-spacing: 1px;
+
+      @media(max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 

@@ -89,6 +89,7 @@ const scroll = () => {
   }
 
   &__burger {
+    margin-top: 23px;
     display: none;
     margin-right: 18px;
 

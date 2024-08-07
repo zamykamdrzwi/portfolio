@@ -24,11 +24,13 @@ document.addEventListener("visibilitychange", changeTitle);
 </template>
 
 <style>
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  //max-width: 100%;
   box-sizing: border-box;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 </style>

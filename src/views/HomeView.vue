@@ -14,32 +14,32 @@ const skills = ref({
     },
     {
       title: 'Bootstrap',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Najwięcej styli napisałem w tym frameworku',
       img: '/images/bootstrap_logo.webp',
     },
     {
       title: 'Tailwind',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/tailwind_logo.webp',
     },
     {
       title: 'Sass',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Używam go w każdym projekcie',
       img: '/images/sass_logo.webp',
     },
     {
       title: 'Docker',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/docker_logo.svg',
     },
     {
       title: 'Linux - Ubuntu',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/ubuntu_logo.svg',
     },
     {
       title: 'Node-JS',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/node-js_logo.svg',
     }
   ]
@@ -51,37 +51,37 @@ const learn = ref({
   items: [
     {
       title: 'Nuxt',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/nuxt_loogo.webp',
     },
     {
       title: 'Laravel',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Nad nauką tego frameworka spędzam obecnie najwięcej czasu',
       img: '/images/laravel_logo.svg',
     },
     {
       title: 'PHP',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/php_logo.svg',
     },
     {
       title: 'Type Script',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/typescript_logo.svg',
     },
     {
       title: 'SQL',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, vero.',
       img: '/images/sql_logo.webp',
     },
     {
       title: 'C#',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Uczę się go głównie na studiach',
       img: '/images/csharp_logo.svg',
     },
     {
       title: 'Java',
-      description: 'Najlepiej programuję we vue 2 oraz vue 3',
+      description: 'Uczę się go głównie na studiach',
       img: '/images/java_logo.webp',
     }
   ]

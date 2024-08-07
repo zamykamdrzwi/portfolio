@@ -64,6 +64,10 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media(max-width: 830px) {
+      width: 100%;
+    }
   }
 
   & swiper-slide {
@@ -74,11 +78,20 @@ onMounted(() => {
     gap: 30px;
     cursor: grab;
 
+    @media(max-width: 830px) {
+      width: 100%;
+    }
+
     & p {
       color: $color-tertiary;
       font-size: 16px;
       letter-spacing: 1px;
       padding: 0 30px;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -94,6 +107,10 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s ease-in-out;
+
+    @media(max-width: 830px) {
+      display: none;
+    }
 
     & img {
       width: 50px;

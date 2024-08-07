@@ -28,7 +28,7 @@ const content = ref([
 <template>
   <section class="container">
     <small data-aos="fade-right">Aplikacja pokazująca relną prognozę pogody w wybranym miejscu</small>
-    <letters-animation :letters="'WheatherApp'"/>
+    <letters-animation :letters="'WeatherApp'"/>
     <div class="container__links">
       <a href="https://github.com/zamykamdrzwi/weatherapp-vue" target="_blank"
          data-aos="fade-right">
@@ -76,6 +76,10 @@ const content = ref([
   background-color: $color-primary;
   padding: 130px 165px;
 
+  @media(max-width: 1050px) {
+    padding: 130px 30px;
+  }
+
   & small {
     color: $color-tertiary;
     font-size: 16px;
@@ -113,8 +117,16 @@ const content = ref([
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: 1680px) {
+      flex-direction: column;
+    }
+
     &-slide {
       width: 55%;
+
+      @media(max-width: 1680px) {
+        width: 100%;
+      }
     }
 
     &-slide.slider-right {
@@ -127,6 +139,11 @@ const content = ref([
       font-size: 16px;
       letter-spacing: 1px;
       line-height: 28px;
+      margin-right: 30px;
+
+      @media(max-width: 1680px) {
+        width: 100%;
+      }
 
       & h3 {
         color: $font-color;

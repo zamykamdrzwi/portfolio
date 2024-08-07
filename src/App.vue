@@ -1,20 +1,24 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { onMounted } from "vue";
+import { RouterView } from 'vue-router';
 import HeaderMenu from './components/HeaderMenu.vue';
 import FooterComponent from './components/FooterComponent.vue';
+
+const originalTitle = document.title;
+
+const changeTitle = () => {
+  if(document.hidden) {
+    document.title = 'Wracaj szybko 💔';
+  } else {
+    document.title = originalTitle;
+  }
+}
+
+document.addEventListener("visibilitychange", changeTitle);
 </script>
 
 <template>
   <HeaderMenu />
-<!--  <header>-->
-<!--    <div class="wrapper">-->
-<!--      <nav>-->
-<!--        <RouterLink to="/">Home</RouterLink>-->
-<!--        <RouterLink to="/about">About</RouterLink>-->
-<!--      </nav>-->
-<!--    </div>-->
-<!--  </header>-->
-
   <RouterView />
   <footer-component />
 </template>
@@ -23,7 +27,7 @@ import FooterComponent from './components/FooterComponent.vue';
 body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  max-width: 100%;
+  //max-width: 100%;
   box-sizing: border-box;
   //overflow-x: hidden;
 }

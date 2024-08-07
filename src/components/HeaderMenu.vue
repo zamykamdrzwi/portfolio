@@ -27,25 +27,32 @@ const scroll = () => {
     }
   });
 }
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+}
 </script>
 
 <template>
   <section class="header">
     <nav class="header__menu">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/projekty">Projekty</RouterLink>
-      <RouterLink to="/doswiadczenie">Doświadczenie</RouterLink>
+      <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
+      <RouterLink to="/about" @click="scrollToTop">About</RouterLink>
+      <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
+      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
     </nav>
     <div class="header__layout add-bg" ref="pcmenu"></div>
     <div class="header__burger">
       <hamburger-menu @click="toggleMenu"/>
     </div>
     <div :class="[ 'header__phone', { 'show' : !isHidden } ]" ref="hamburger">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/projekty">Projekty</RouterLink>
-      <RouterLink to="/doswiadczenie">Doświadczenie</RouterLink>
+      <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
+      <RouterLink to="/about" @click="scrollToTop">About</RouterLink>
+      <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
+      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
     </div>
   </section>
 </template>

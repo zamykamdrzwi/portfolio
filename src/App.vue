@@ -25,6 +25,6 @@ body {
   font-family: "Roboto Mono", monospace;
   max-width: 100%;
   box-sizing: border-box;
-  //overflow-y: hidden;
+  //overflow-x: hidden;
 }
 </style>

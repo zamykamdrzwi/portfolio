@@ -3,7 +3,7 @@ import EmailForm from "@/components/EmailForm.vue";
 </script>
 
 <template>
-  <section class="footer">
+  <section class="footer" id="contact">
     <div class="footer__header">
       <small data-aos="fade-right">
         Jeżeli jesteś zainteresowany podjęciem ze mną współpracy to zapraszam do kontaktu

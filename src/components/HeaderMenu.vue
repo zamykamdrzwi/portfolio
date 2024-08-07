@@ -40,7 +40,7 @@ const scrollToTop = () => {
   <section class="header">
     <nav class="header__menu">
       <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
-      <RouterLink to="/about" @click="scrollToTop">About</RouterLink>
+      <RouterLink to="/moje-umiejetnosci" @click="scrollToTop">Moje Umiejętności</RouterLink>
       <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
       <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
     </nav>
@@ -50,7 +50,7 @@ const scrollToTop = () => {
     </div>
     <div :class="[ 'header__phone', { 'show' : !isHidden } ]" ref="hamburger">
       <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
-      <RouterLink to="/about" @click="scrollToTop">About</RouterLink>
+      <RouterLink to="/moje-umiejetnosci" @click="scrollToTop">Moje Umiejętności</RouterLink>
       <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
       <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
     </div>
@@ -111,7 +111,7 @@ const scrollToTop = () => {
     align-items: flex-end;
     position: fixed;
     top: 60px;
-    right: -150px;
+    right: -190px;
     background-color: rgba(0, 0, 0, 0.2);
     transition: right 0.5s ease-in-out;
 

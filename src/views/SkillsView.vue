@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from "vue";
 import SkillsCheck from "@/components/skills/SkillsCheck.vue";
+import RemainingSkills from "@/components/skills/RemainingSkills.vue";
+
+const skillsSettings = ref('#555555');
+const learnSettings = ref('#2F2F2F');
 
 const skills = ref({
   title: 'Moje umiejętności',
@@ -85,12 +89,72 @@ const learn = ref({
     }
   ]
 });
+
+const remaining = ref({
+  title: 'Pozostałe umiejętności',
+  subtitle: 'Biblioteki, języki prrogramowania, frameworki, narzędzia, inne',
+  items: [
+    {
+      title: 'Pinia',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Vue router',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Vue store',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Git',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Visual Studio',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Php Storm',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Google API',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Swiper JS',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Three JS',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Chart.js',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Highcharts',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Google API',
+      img: '/images/java_logo.webp'
+    },
+    {
+      title: 'Google API',
+      img: '/images/java_logo.webp'
+    },
+  ]
+});
 </script>
 
 <template>
   <section>
-    <skills-check :skills="skills"/>
-    <skills-check :skills="learn"/>
+    <skills-check :skills="skills" :settings="skillsSettings"/>
+    <skills-check :skills="learn" :settings="learnSettings"/>
+    <remaining-skills :skills="remaining"/>
   </section>
 </template>
 

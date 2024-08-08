@@ -1,12 +1,22 @@
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, onMounted } from "vue";
 import LettersAnimation from "@/components/layouts/LettersAnimation.vue";
 
-const { skills } = defineProps(["skills"]);
+const { skills, settings } = defineProps(["skills", "settings"]);
+
+const container = ref(null);
+
+const changeBackground = () => {
+  container.value.style.backgroundColor = settings;
+};
+
+onMounted(() => {
+  changeBackground();
+})
 </script>
 
 <template>
-  <section class="container">
+  <section class="container" ref="container">
     <div class="container__header">
       <small data-aos="fade-right">{{ skills.subtitle }}</small>
       <letters-animation :letters="skills.title"/>

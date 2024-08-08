@@ -45,9 +45,15 @@ const content = ref([
         <slider-component :content="content"/>
       </div>
       <div class="container__content-text">
-        <h3 data-aos="fade-right">
-          Na temat aplikacji
-        </h3>
+        <div class="container__content-text-title">
+          <h3 data-aos="fade-right">
+            Na temat aplikacji
+          </h3>
+          <span>
+            <img src="/images/vue_logo.webp" alt="vue logo">
+            <img src="/images/bootstrap_logo.webp" alt="bootstrap logo">
+          </span>
+        </div>
         <p data-aos="fade-up">
           <span class="bold"><a href="https://weatherapp-vue-two.vercel.app/weather" target="_blank">WeatherApp</a></span> ma za zadanie pokazywać aktualną, jak i przyszłą
           pogodę. Aby tego dokonać, użyłem <span class="bold"><a href="https://openweathermap.org/" target="_blank">OpenWeather API</a></span>, który dostarcza mi dane pogodowe
@@ -145,10 +151,26 @@ const content = ref([
         width: 100%;
       }
 
-      & h3 {
-        color: $font-color;
-        font-size: 25px;
-        margin-bottom: 45px;
+      &-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h3 {
+          color: $font-color;
+          font-size: 25px;
+          margin-bottom: 35px;
+        }
+
+        & span {
+          display: flex;
+          gap: 15px;
+
+          & img {
+            width: 30px;
+          }
+        }
       }
 
       & p {

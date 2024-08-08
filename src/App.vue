@@ -23,9 +23,14 @@ document.addEventListener("visibilitychange", changeTitle);
   <footer-component />
 </template>
 
-<style>
+<style lang="scss">
 html {
   overflow-x: hidden;
+
+  ::selection {
+    background-color: $font-color;
+    color: $color-secondary;
+  }
 }
 body {
   margin: 0;

@@ -52,15 +52,22 @@ const { skills } = defineProps(["skills"]);
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     &-item {
-      width: 400px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
     }
 
     &-box {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      transition: all 1s ease;
 
       & img {
         height: 34px;
@@ -71,6 +78,30 @@ const { skills } = defineProps(["skills"]);
         font-size: 16px;
         letter-spacing: 1px;
         font-weight: 700;
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+        transition: all 1s ease;
+      }
+    }
+
+    &-box:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+
+      & h4 {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    &-box:active {
+      background-color: rgba(0, 0, 0, 0.2);
+
+      & h4 {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
       }
     }
   }

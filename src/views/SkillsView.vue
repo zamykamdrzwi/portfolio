@@ -96,55 +96,55 @@ const remaining = ref({
   items: [
     {
       title: 'Pinia',
-      img: '/images/java_logo.webp'
+      img: '/images/pinia_logo.svg'
     },
     {
       title: 'Vue router',
-      img: '/images/java_logo.webp'
+      img: '/images/vue_logo.webp'
     },
     {
       title: 'Vue store',
-      img: '/images/java_logo.webp'
+      img: '/images/vue_logo.webp'
     },
     {
       title: 'Git',
-      img: '/images/java_logo.webp'
+      img: '/images/git_logo.svg'
     },
     {
       title: 'Visual Studio',
-      img: '/images/java_logo.webp'
+      img: '/images/vs_logo.svg'
     },
     {
       title: 'Php Storm',
-      img: '/images/java_logo.webp'
+      img: '/images/phpstorm_logo.svg'
     },
     {
       title: 'Google API',
-      img: '/images/java_logo.webp'
+      img: '/images/google_logo.webp'
     },
     {
       title: 'Swiper JS',
-      img: '/images/java_logo.webp'
+      img: '/images/swiper_logo.webp'
     },
     {
       title: 'Three JS',
-      img: '/images/java_logo.webp'
+      img: '/images/threejs_logo.svg'
     },
     {
       title: 'Chart.js',
-      img: '/images/java_logo.webp'
+      img: '/images/chartjs_logo.svg'
     },
     {
       title: 'Highcharts',
-      img: '/images/java_logo.webp'
+      img: '/images/highcharts_logo.svg'
     },
     {
-      title: 'Google API',
-      img: '/images/java_logo.webp'
+      title: 'Postman',
+      img: '/images/postman_logo.svg'
     },
     {
-      title: 'Google API',
-      img: '/images/java_logo.webp'
+      title: 'NPM',
+      img: '/images/npm_logo.svg'
     },
   ]
 });

@@ -38,4 +38,17 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.bold {
+  font-weight: 700;
+
+  & a {
+    text-decoration: none;
+    color: $color-tertiary;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}
 </style>

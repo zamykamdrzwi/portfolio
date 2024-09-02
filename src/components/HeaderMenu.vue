@@ -42,7 +42,7 @@ const scrollToTop = () => {
       <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
       <RouterLink to="/moje-umiejetnosci" @click="scrollToTop">Moje Umiejętności</RouterLink>
       <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
-      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
+<!--      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>-->
     </nav>
     <div class="header__layout add-bg" ref="pcmenu"></div>
     <div class="header__burger">
@@ -52,7 +52,7 @@ const scrollToTop = () => {
       <RouterLink to="/" @click="scrollToTop">Home</RouterLink>
       <RouterLink to="/moje-umiejetnosci" @click="scrollToTop">Moje Umiejętności</RouterLink>
       <RouterLink to="/projekty" @click="scrollToTop">Projekty</RouterLink>
-      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>
+<!--      <RouterLink to="/doswiadczenie" @click="scrollToTop">Doświadczenie</RouterLink>-->
     </div>
   </section>
 </template>
